@@ -15,6 +15,8 @@ gem "bootsnap", require: false
 gem "rack-cors"
 gem 'webpacker'
 
+gem "image_processing"
+
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
 end
