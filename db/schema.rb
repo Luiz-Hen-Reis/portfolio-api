@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_29_143438) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_01_154508) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "btree_gin"
   enable_extension "btree_gist"
@@ -102,6 +102,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_29_143438) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "project_tecnologies", "projects", on_delete: :cascade
-  add_foreign_key "project_tecnologies", "tecnologies"
+  add_foreign_key "project_tecnologies", "tecnologies", on_delete: :cascade
   add_foreign_key "tecnologies", "institutions", on_delete: :cascade
 end
