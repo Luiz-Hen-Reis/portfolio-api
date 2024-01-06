@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resources :formations, only: :index
       resources :tecnologies, only: :index
       resources :projects, only: :index
+      get '/data', to: 'project_tecnologies#index'
     end
   end
 end
